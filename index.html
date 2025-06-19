@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+    <title>JavaScript CURD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+    <div class="toolbar">
+      <input type="search" placeholder="Search student...">
+      <button onclick="alert('Add Student Form')"><i class="fas fa-plus"></i> Add Student</button>
+
+    </div>
+
+    <div class="student-list" id="studentList">
+      <!--student row -->
+      <div class="student-row">
+       <table id="student-table">
+        <thead>
+          <tr>
+            <th>First name</th>
+            <th>Surname</th>
+            <th>Course code</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="student-list">
+          <!--Student data will be displayed here-->
+
+        </tbody>
+
+       </table>
+
+
+
+      </div>
+    </div>
+  </div>
+<!-- Student Form Popup -->
+<div id="studentFormModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <h3>Add / Edit Student</h3>
+    <form id="studentForm">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="surname" placeholder="Surname" required />
+      <input type="text" id="courseCode" placeholder="Course Code" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Save Student</button>
+      <button type="button" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+
+  <!--script link -->
+    <script src="main.js">
+    </script>
+</body>
+</html>
